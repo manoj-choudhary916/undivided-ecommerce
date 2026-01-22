@@ -6,8 +6,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Undivided Backend Running Successfully");
+app.get("/api/test", (req, res) => {
+  res.json({
+    message: "Backend connected successfully",
+    status: "OK"
+  });
 });
 
 const PORT = 5000;
